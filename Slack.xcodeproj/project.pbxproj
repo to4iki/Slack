@@ -10,6 +10,7 @@
 		1E379E141C6A49FC00830F0E /* Slack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E379E131C6A49FC00830F0E /* Slack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E379E1B1C6A49FC00830F0E /* Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E379E101C6A49FC00830F0E /* Slack.framework */; };
 		1E379E201C6A49FC00830F0E /* SlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E379E1F1C6A49FC00830F0E /* SlackTests.swift */; };
+		1E379E2B1C6A4C3B00830F0E /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E379E2A1C6A4C3B00830F0E /* Slack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		1E379E1A1C6A49FC00830F0E /* SlackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E379E1F1C6A49FC00830F0E /* SlackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackTests.swift; sourceTree = "<group>"; };
 		1E379E211C6A49FC00830F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E379E2A1C6A4C3B00830F0E /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1E379E131C6A49FC00830F0E /* Slack.h */,
+				1E379E2A1C6A4C3B00830F0E /* Slack.swift */,
 				1E379E151C6A49FC00830F0E /* Info.plist */,
 			);
 			path = Slack;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E379E2B1C6A4C3B00830F0E /* Slack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 		1E379E251C6A49FC00830F0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Slack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1E379E261C6A49FC00830F0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

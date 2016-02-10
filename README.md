@@ -5,6 +5,7 @@
 
 ## Description
 Slack webhook API client for Swift.
+- [Incoming Webhooks | Slack](https://api.slack.com/incoming-webhooks)
 
 ## Requirements
 - Swift 2.1 or later
