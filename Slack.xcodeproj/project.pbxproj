@@ -11,6 +11,11 @@
 		1E379E1B1C6A49FC00830F0E /* Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E379E101C6A49FC00830F0E /* Slack.framework */; };
 		1E379E201C6A49FC00830F0E /* SlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E379E1F1C6A49FC00830F0E /* SlackTests.swift */; };
 		1E379E2B1C6A4C3B00830F0E /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E379E2A1C6A4C3B00830F0E /* Slack.swift */; };
+		1EA903BB1C6BA1910086CC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA903BA1C6BA1910086CC3F /* AppDelegate.swift */; };
+		1EA903BD1C6BA1910086CC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA903BC1C6BA1910086CC3F /* ViewController.swift */; };
+		1EA903C01C6BA1910086CC3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903BE1C6BA1910086CC3F /* Main.storyboard */; };
+		1EA903C21C6BA1910086CC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903C11C6BA1910086CC3F /* Assets.xcassets */; };
+		1EA903C51C6BA1910086CC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903C31C6BA1910086CC3F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,13 @@
 		1E379E1F1C6A49FC00830F0E /* SlackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackTests.swift; sourceTree = "<group>"; };
 		1E379E211C6A49FC00830F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E379E2A1C6A4C3B00830F0E /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
+		1EA903B81C6BA1910086CC3F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA903BA1C6BA1910086CC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EA903BC1C6BA1910086CC3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EA903BF1C6BA1910086CC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EA903C11C6BA1910086CC3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EA903C41C6BA1910086CC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EA903C61C6BA1910086CC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EA903B51C6BA1910086CC3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +76,7 @@
 			children = (
 				1E379E121C6A49FC00830F0E /* Slack */,
 				1E379E1E1C6A49FC00830F0E /* SlackTests */,
+				1EA903B91C6BA1910086CC3F /* Example */,
 				1E379E111C6A49FC00830F0E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +86,7 @@
 			children = (
 				1E379E101C6A49FC00830F0E /* Slack.framework */,
 				1E379E1A1C6A49FC00830F0E /* SlackTests.xctest */,
+				1EA903B81C6BA1910086CC3F /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +108,19 @@
 				1E379E211C6A49FC00830F0E /* Info.plist */,
 			);
 			path = SlackTests;
+			sourceTree = "<group>";
+		};
+		1EA903B91C6BA1910086CC3F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				1EA903BA1C6BA1910086CC3F /* AppDelegate.swift */,
+				1EA903BC1C6BA1910086CC3F /* ViewController.swift */,
+				1EA903BE1C6BA1910086CC3F /* Main.storyboard */,
+				1EA903C11C6BA1910086CC3F /* Assets.xcassets */,
+				1EA903C31C6BA1910086CC3F /* LaunchScreen.storyboard */,
+				1EA903C61C6BA1910086CC3F /* Info.plist */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +173,23 @@
 			productReference = 1E379E1A1C6A49FC00830F0E /* SlackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1EA903B71C6BA1910086CC3F /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EA903C91C6BA1910086CC3F /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				1EA903B41C6BA1910086CC3F /* Sources */,
+				1EA903B51C6BA1910086CC3F /* Frameworks */,
+				1EA903B61C6BA1910086CC3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 1EA903B81C6BA1910086CC3F /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +208,10 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = KX9834768X;
 					};
+					1EA903B71C6BA1910086CC3F = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = KX9834768X;
+					};
 				};
 			};
 			buildConfigurationList = 1E379E0A1C6A49FC00830F0E /* Build configuration list for PBXProject "Slack" */;
@@ -165,6 +220,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1E379E061C6A49FC00830F0E;
 			productRefGroup = 1E379E111C6A49FC00830F0E /* Products */;
@@ -173,6 +229,7 @@
 			targets = (
 				1E379E0F1C6A49FC00830F0E /* Slack */,
 				1E379E191C6A49FC00830F0E /* SlackTests */,
+				1EA903B71C6BA1910086CC3F /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +246,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EA903B61C6BA1910086CC3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA903C51C6BA1910086CC3F /* LaunchScreen.storyboard in Resources */,
+				1EA903C21C6BA1910086CC3F /* Assets.xcassets in Resources */,
+				1EA903C01C6BA1910086CC3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +278,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EA903B41C6BA1910086CC3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA903BD1C6BA1910086CC3F /* ViewController.swift in Sources */,
+				1EA903BB1C6BA1910086CC3F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -220,6 +296,25 @@
 			targetProxy = 1E379E1C1C6A49FC00830F0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EA903BE1C6BA1910086CC3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EA903BF1C6BA1910086CC3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EA903C31C6BA1910086CC3F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EA903C41C6BA1910086CC3F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1E379E221C6A49FC00830F0E /* Debug */ = {
@@ -366,6 +461,28 @@
 			};
 			name = Release;
 		};
+		1EA903C71C6BA1910086CC3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EA903C81C6BA1910086CC3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -385,12 +502,22 @@
 				1E379E261C6A49FC00830F0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E379E271C6A49FC00830F0E /* Build configuration list for PBXNativeTarget "SlackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E379E281C6A49FC00830F0E /* Debug */,
 				1E379E291C6A49FC00830F0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EA903C91C6BA1910086CC3F /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EA903C71C6BA1910086CC3F /* Debug */,
+				1EA903C81C6BA1910086CC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
