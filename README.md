@@ -4,7 +4,7 @@
 [![License][license-image]][license-url]
 
 ## Description
-Slack webhook API client for Swift.
+Slack WebHooks API Client for Swift.
 - [Incoming Webhooks | Slack](https://api.slack.com/incoming-webhooks)
 
 ## Requirements
@@ -15,11 +15,36 @@ Slack webhook API client for Swift.
 
 #### [Carthage](https://github.com/Carthage/Carthage)
 
-- Insert `github "to4iki/Monocle" ~> 0.0.3` to your Cartfile.
+- Insert `github "to4iki/Slack"` to your Cartfile.
 - Run `carthage update`.
-- Link your app with `Monocle.framework` in `Carthage/Checkouts`.
+- Link your app with `Slack.framework` in `Carthage/Checkouts`.
 
 ## Usage
+Configure  
+Set webhook URL string.
+```
+let slack = Slack.sharedInstance
+Slack.configure("https://hooks.slack.com/services/<YOUR_WEBHOOK_URL>")
+```
+
+Send message
+```
+let builder = Slack.RequestBodyBuilder()
+    .channel("#general")
+    .botName("skack-webhook-sample")
+    .iconEmoji(":ghost:")
+    .text(text)
+
+slack.sendMessage(builder.result()) { (data, err) in
+    if let d = data, s = NSString(data: d, encoding: NSUTF8StringEncoding) {
+        print("sucess: \(s)")
+    }
+
+    if let e = err {
+        print("error: \(e.localizedDescription): \(e.userInfo)")
+    }
+}
+```
 
 ## Author
 
