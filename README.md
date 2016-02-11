@@ -1,5 +1,6 @@
 # Slack
 
+[![Build Status][status-image]][status-url]
 [![Carthage compatible][carthage-image]][carthage-url]
 [![License][license-image]][license-url]
 
@@ -22,13 +23,13 @@ Slack WebHooks API Client for Swift.
 ## Usage
 Configure  
 Set webhook URL string.
-```
+```swift
 let slack = Slack.sharedInstance
 Slack.configure("https://hooks.slack.com/services/<YOUR_WEBHOOK_URL>")
 ```
 
 Send message
-```
+```swift
 let builder = Slack.RequestBodyBuilder()
     .channel("#general")
     .botName("skack-webhook-sample")
@@ -53,6 +54,9 @@ slack.sendMessage(builder.result()) { (data, err) in
 ## Licence
 
 [MIT](http://to4iki.mit-license.org/)
+
+[status-url]: https://travis-ci.org/to4iki/Slack
+[status-image]: https://travis-ci.org/to4iki/Slack.svg
 
 [carthage-url]: https://github.com/Carthage/Carthage
 [carthage-image]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
