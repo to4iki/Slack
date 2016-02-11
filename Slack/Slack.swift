@@ -65,7 +65,7 @@ extension Slack {
     private class Request {
         
         /// Session
-       let session = NSURLSession.sharedSession()
+        let session = NSURLSession.sharedSession()
         
         /// POST
         func post(url: NSURL, parameters: Parameters, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) {

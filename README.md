@@ -24,7 +24,6 @@ Slack WebHooks API Client for Swift.
 Configure  
 Set webhook URL string.
 ```swift
-let slack = Slack.sharedInstance
 Slack.configure("https://hooks.slack.com/services/<YOUR_WEBHOOK_URL>")
 ```
 
@@ -34,9 +33,9 @@ let builder = Slack.RequestBodyBuilder()
     .channel("#general")
     .botName("skack-webhook-sample")
     .iconEmoji(":ghost:")
-    .text(text)
+    .text("test message")
 
-slack.sendMessage(builder.result()) { (data, err) in
+Slack.sharedInstance.sendMessage(builder.result()) { (data, err) in
     if let d = data, s = NSString(data: d, encoding: NSUTF8StringEncoding) {
         print("sucess: \(s)")
     }
