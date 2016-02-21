@@ -7,6 +7,7 @@
 ## Description
 Slack WebHooks API Client for Swift.
 - [Incoming Webhooks | Slack](https://api.slack.com/incoming-webhooks)
+- [Attachments | Slack](https://api.slack.com/docs/attachments)
 
 ## Requirements
 - Swift 2.1 or later
@@ -21,21 +22,17 @@ Slack WebHooks API Client for Swift.
 - Link your app with `Slack.framework` in `Carthage/Checkouts`.
 
 ## Usage
-Configure  
+
+##### Configure  
 Set webhook URL string.
 ```swift
 Slack.configure("https://hooks.slack.com/services/<YOUR_WEBHOOK_URL>")
 ```
 
-Send message
+##### Send message
+simple.
 ```swift
-let builder = Slack.RequestBodyBuilder()
-    .channel("#general")
-    .botName("skack-webhook-sample")
-    .iconEmoji(":ghost:")
-    .text("test message")
-
-Slack.sharedInstance.sendMessage(builder.result()) { (data, err) in
+Slack.sharedInstance.sendSimpleMessage("Hello!") { (data, err) in
     if let d = data, s = NSString(data: d, encoding: NSUTF8StringEncoding) {
         print("sucess: \(s)")
     }
@@ -43,6 +40,30 @@ Slack.sharedInstance.sendMessage(builder.result()) { (data, err) in
     if let e = err {
         print("error: \(e.localizedDescription): \(e.userInfo)")
     }
+}
+```
+
+customized.
+```swift
+let msg = Slack.Message.build { m in
+    m.channel("#general")
+    m.botName("slack-webhook-sample")
+    m.iconEmoji(":ghost:")
+    m.text("Hello!")
+    m.attachment([
+        Slack.Attachment.build { (a: Slack.Attachment) in
+            a.fallback("fallback...")
+            a.pretext("pretext...")
+            a.title(Slack.Title(text: "title", link: nil))
+            a.text("advanced text.")
+            a.imageUrl("http://my-website.com/path/to/image.jpg")
+            a.color(.Good)
+            a.tableMessages([Slack.TableMessage(title: "Project", value: "Awesome Project")])
+    ])
+}
+
+Slack.sharedInstance.sendMessage(msg) { (data, err) in
+    // implement...
 }
 ```
 

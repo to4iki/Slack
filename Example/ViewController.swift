@@ -25,17 +25,20 @@ final class ViewController: UIViewController {
             return
         }
         
-        // sample parameter.
-        let params = Slack.RequestBodyBuilder()
-            .channel("#general")
-            .botName("skack-webhook-sample")
-            .iconEmoji(":ghost:")
-            .text(text)
-            .result()
+        let msg = Slack.Message.build { m in
+            m.channel("#general")
+            m.botName("slack-webhook-sample")
+            m.iconEmoji(":ghost:")
+            m.text(text)
+            m.attachment([
+                AttachmentSample.groove, AttachmentSample.honeybadger, AttachmentSample.datadog
+            ])
+        }
         
-        slack.sendMessage(params) { (data, err) -> Void in
+        slack.sendMessage(msg) { (data, err) -> Void in
             if let d = data, s = NSString(data: d, encoding: NSUTF8StringEncoding) {
-                print(s)
+                print("success \(s)")
+                self.clearText()
             }
             
             if let e = err {
@@ -45,3 +48,9 @@ final class ViewController: UIViewController {
     }
 }
 
+extension ViewController {
+    
+    private func clearText() {
+        textField.text = ""
+    }
+}
