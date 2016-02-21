@@ -37,16 +37,22 @@ extension Slack {
 
 extension Slack {
     
-    public func sendMessage(parameters: Parameters, completionHandler: (NSData?, NSError?) -> Void) {
+    /// Send configurated message.
+    public func sendMessage(message: Message, completionHandler: (NSData?, NSError?) -> Void) {
         guard let url = hookURL else { return }
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            self.request.post(url, parameters: parameters, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            self.request.post(url, parameters: message.toParameters(), completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
                 dispatch_async(dispatch_get_main_queue()) {
                     completionHandler(data, error)
                 }
             })
         }
+    }
+    
+    /// Send simple message.
+    public func sendSimpleMessage(text: String, completionHandler: (NSData?, NSError?) -> Void) {
+        sendMessage(Message.build({ $0.text(text) }), completionHandler: completionHandler)
     }
 }
 
@@ -55,7 +61,7 @@ extension Slack {
 extension Slack {
     
     /// A parameter dictionary for the request.
-    public typealias Parameters = [String: String]
+    public typealias Parameters = [String: AnyObject]
     
     /// HTTP method
     private enum HTTPMethod: String {
@@ -82,45 +88,6 @@ extension Slack {
             }
             
             session.dataTaskWithRequest(request, completionHandler: completionHandler).resume()
-        }
-    }
-}
-
-/// MARK: - RequestBodyBuilder
-
-extension Slack {
-    
-    /// Build request paramerters
-    public class RequestBodyBuilder {
-        
-        private var parameters: Parameters
-        
-        public init() {
-            self.parameters = [:]
-        }
-        
-        public func channel(channel: String) -> Self {
-            parameters["channel"] = channel
-            return self
-        }
-        
-        public func botName(botName: String) -> Self {
-            parameters["username"] = botName
-            return self
-        }
-        
-        public func iconEmoji(iconEmoji: String) -> Self {
-            parameters["icon_emoji"] = iconEmoji
-            return self
-        }
-        
-        public func text(messge: String) -> Self {
-            parameters["text"] = messge
-            return self
-        }
-        
-        public func result() -> Parameters {
-            return self.parameters
         }
     }
 }

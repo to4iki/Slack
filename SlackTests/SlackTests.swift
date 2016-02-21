@@ -23,12 +23,6 @@ class SlackTests: XCTestCase {
         // TODO
     }
     
-    func testRequestBodyBuilder() {
-        let builder = Slack.RequestBodyBuilder()
-        builder.channel("#general").botName("bot").iconEmoji(":ghost:").text("test")
-        
-        let expectd = ["channel": "#general", "username": "bot", "icon_emoji": ":ghost:", "text": "test"]
-        
-        XCTAssertEqual(expectd, builder.result())
+    func testMessageBuilder() {
     }
 }

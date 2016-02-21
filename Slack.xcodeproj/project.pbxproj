@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2B63091C6F2A39004F15E1 /* SlackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B63081C6F2A39004F15E1 /* SlackBuilder.swift */; };
 		1E379E141C6A49FC00830F0E /* Slack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E379E131C6A49FC00830F0E /* Slack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E379E1B1C6A49FC00830F0E /* Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E379E101C6A49FC00830F0E /* Slack.framework */; };
 		1E379E201C6A49FC00830F0E /* SlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E379E1F1C6A49FC00830F0E /* SlackTests.swift */; };
@@ -16,6 +17,7 @@
 		1EA903C01C6BA1910086CC3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903BE1C6BA1910086CC3F /* Main.storyboard */; };
 		1EA903C21C6BA1910086CC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903C11C6BA1910086CC3F /* Assets.xcassets */; };
 		1EA903C51C6BA1910086CC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA903C31C6BA1910086CC3F /* LaunchScreen.storyboard */; };
+		1ED7DE0A1C772AAF007F2C2C /* AttachmentSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7DE091C772AAF007F2C2C /* AttachmentSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2B63081C6F2A39004F15E1 /* SlackBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackBuilder.swift; sourceTree = "<group>"; };
 		1E379E101C6A49FC00830F0E /* Slack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Slack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E379E131C6A49FC00830F0E /* Slack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Slack.h; sourceTree = "<group>"; };
 		1E379E151C6A49FC00830F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		1EA903C11C6BA1910086CC3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EA903C41C6BA1910086CC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EA903C61C6BA1910086CC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ED7DE091C772AAF007F2C2C /* AttachmentSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				1E379E131C6A49FC00830F0E /* Slack.h */,
 				1E379E2A1C6A4C3B00830F0E /* Slack.swift */,
+				1E2B63081C6F2A39004F15E1 /* SlackBuilder.swift */,
 				1E379E151C6A49FC00830F0E /* Info.plist */,
 			);
 			path = Slack;
@@ -115,6 +120,7 @@
 			children = (
 				1EA903BA1C6BA1910086CC3F /* AppDelegate.swift */,
 				1EA903BC1C6BA1910086CC3F /* ViewController.swift */,
+				1ED7DE091C772AAF007F2C2C /* AttachmentSample.swift */,
 				1EA903BE1C6BA1910086CC3F /* Main.storyboard */,
 				1EA903C11C6BA1910086CC3F /* Assets.xcassets */,
 				1EA903C31C6BA1910086CC3F /* LaunchScreen.storyboard */,
@@ -267,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E379E2B1C6A4C3B00830F0E /* Slack.swift in Sources */,
+				1E2B63091C6F2A39004F15E1 /* SlackBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA903BD1C6BA1910086CC3F /* ViewController.swift in Sources */,
+				1ED7DE0A1C772AAF007F2C2C /* AttachmentSample.swift in Sources */,
 				1EA903BB1C6BA1910086CC3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +528,7 @@
 				1EA903C81C6BA1910086CC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
